@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulação de Marte</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    canvas {
+      display: block;
+    }
+    button {
+      position: absolute;
+      top: 20px;
+      font-size: 24px;
+      padding: 10px 20px;
+      background-color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    #increase-speed {
+      left: 20px;
+    }
+    #decrease-speed {
+      left: 100px;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="solar-system"></canvas>
+  <button id="increase-speed">+</button>
+  <button id="decrease-speed">-</button>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
