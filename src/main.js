@@ -13,7 +13,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 camera.position.set(0, 20, 50);
 
 // Luz ambiente
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
 scene.add(ambientLight);
 
 // Luz direcional
