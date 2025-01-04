@@ -10,16 +10,20 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('solar-system') });
 
 renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(window.devicePixelRatio);
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.2; // Ajustar exposição para melhorar o brilho
 camera.position.set(0, 20, 50);
 
 // Luz ambiente
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.8); // Intensidade aumentada
 scene.add(ambientLight);
 
 // Luz direcional
-const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5); // Intensidade aumentada
 directionalLight.position.set(10, 10, 10);
 scene.add(directionalLight);
+
 
 // Adicionar o fundo das estrelas
 const textureLoader = new THREE.TextureLoader();
